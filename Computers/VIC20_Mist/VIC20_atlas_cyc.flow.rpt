@@ -1,0 +1,148 @@
+Flow report for VIC20_atlas_cyc
+Wed Jan  5 13:27:09 2022
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++------------------------------------+---------------------------------------------+
+; Flow Status                        ; Successful - Wed Jan  5 13:27:00 2022       ;
+; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name                      ; VIC20_atlas_cyc                             ;
+; Top-level Entity Name              ; atlas_top                                   ;
+; Family                             ; Cyclone 10 LP                               ;
+; Device                             ; 10CL025YU256C8G                             ;
+; Timing Models                      ; Final                                       ;
+; Total logic elements               ; 10,087 / 24,624 ( 41 % )                    ;
+;     Total combinational functions  ; 9,395 / 24,624 ( 38 % )                     ;
+;     Dedicated logic registers      ; 4,243 / 24,624 ( 17 % )                     ;
+; Total registers                    ; 4249                                        ;
+; Total pins                         ; 77 / 151 ( 51 % )                           ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 447,632 / 608,256 ( 74 % )                  ;
+; Embedded Multiplier 9-bit elements ; 10 / 132 ( 8 % )                            ;
+; Total PLLs                         ; 2 / 4 ( 50 % )                              ;
++------------------------------------+---------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 01/05/2022 13:24:40 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; VIC20_atlas_cyc     ;
++-------------------+---------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                       ;
++-------------------------------------+---------------------------------------------------------------------+-----------------+-------------+------------+
+; Assignment Name                     ; Value                                                               ; Default Value   ; Entity Name ; Section Id ;
++-------------------------------------+---------------------------------------------------------------------+-----------------+-------------+------------+
+; AUTO_MERGE_PLLS                     ; Off                                                                 ; On              ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 190135458541196.164138548020786                                     ; --              ; --          ; --         ;
+; FLOW_ENABLE_POWER_ANALYZER          ; On                                                                  ; Off             ; --          ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                                  ; --              ; --          ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                                   ; --              ; --          ; --         ;
+; MISC_FILE                           ; pll27.ppf                                                           ; --              ; --          ; --         ;
+; MISC_FILE                           ; pll_vic20.ppf                                                       ; --              ; --          ; --         ;
+; MISC_FILE                           ; rom_reconfig_ntsc_bb.v                                              ; --              ; --          ; --         ;
+; MISC_FILE                           ; rom_reconfig_pal_bb.v                                               ; --              ; --          ; --         ;
+; MISC_FILE                           ; ../pll_reconfig_bb.v                                                ; --              ; --          ; --         ;
+; MISC_FILE                           ; ../DeMiSTify/controller/../EightThirtyTwo/RTL/debug_virtualjtag.cmp ; --              ; --          ; --         ;
+; MISC_FILE                           ; ../DeMiSTify/controller/../EightThirtyTwo/RTL/debug_fifo_altera.cmp ; --              ; --          ; --         ;
+; NUM_PARALLEL_PROCESSORS             ; All                                                                 ; --              ; --          ; --         ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                                                   ; --              ; --          ; --         ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                                                   ; --              ; --          ; --         ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                                                          ; --              ; --          ; --         ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                                                          ; --              ; --          ; --         ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family)                              ; --              ; atlas_top   ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                              ; --              ; atlas_top   ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                              ; --              ; atlas_top   ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                                 ; --              ; --          ; --         ;
+; POWER_DEFAULT_INPUT_IO_TOGGLE_RATE  ; 12.5 %                                                              ; 12.5%           ; --          ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                               ; --              ; --          ; --         ;
+; PRE_FLOW_SCRIPT_FILE                ; quartus_sh:../build_id_verilog.tcl                                  ; --              ; --          ; --         ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                        ; --              ; --          ; --         ;
+; TOP_LEVEL_ENTITY                    ; atlas_top                                                           ; VIC20_atlas_cyc ; --          ; --         ;
+; VERILOG_MACRO                       ; DEMISTIFY_PARALLEL_AUDIO=1                                          ; --              ; --          ; --         ;
+; VERILOG_MACRO                       ; DEMISTIFY_HDMI=1                                                    ; --              ; --          ; --         ;
+; VERILOG_MACRO                       ; DEMISTIFY_ATLAS_CYC=1                                               ; --              ; --          ; --         ;
+; VERILOG_MACRO                       ; DEMISTIFY=1                                                         ; --              ; --          ; --         ;
++-------------------------------------+---------------------------------------------------------------------+-----------------+-------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:01:08     ; 1.0                     ; 1176 MB             ; 00:01:28                           ;
+; Fitter                    ; 00:00:51     ; 1.2                     ; 1363 MB             ; 00:01:11                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 822 MB              ; 00:00:02                           ;
+; Power Analyzer            ; 00:00:12     ; 1.1                     ; 1291 MB             ; 00:00:13                           ;
+; TimeQuest Timing Analyzer ; 00:00:08     ; 1.2                     ; 921 MB              ; 00:00:09                           ;
+; Total                     ; 00:02:21     ; --                      ; --                  ; 00:03:03                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++---------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                             ;
++---------------------------+------------------+----------------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name        ; OS Version ; Processor type ;
++---------------------------+------------------+----------------+------------+----------------+
+; Analysis & Synthesis      ; jordi-TM1613     ; Ubuntu 20.04.3 ; 20         ; x86_64         ;
+; Fitter                    ; jordi-TM1613     ; Ubuntu 20.04.3 ; 20         ; x86_64         ;
+; Assembler                 ; jordi-TM1613     ; Ubuntu 20.04.3 ; 20         ; x86_64         ;
+; Power Analyzer            ; jordi-TM1613     ; Ubuntu 20.04.3 ; 20         ; x86_64         ;
+; TimeQuest Timing Analyzer ; jordi-TM1613     ; Ubuntu 20.04.3 ; 20         ; x86_64         ;
++---------------------------+------------------+----------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off VIC20_atlas_cyc -c VIC20_atlas_cyc
+quartus_fit --read_settings_files=off --write_settings_files=off VIC20_atlas_cyc -c VIC20_atlas_cyc
+quartus_asm --read_settings_files=off --write_settings_files=off VIC20_atlas_cyc -c VIC20_atlas_cyc
+quartus_pow --read_settings_files=off --write_settings_files=off VIC20_atlas_cyc -c VIC20_atlas_cyc
+quartus_sta VIC20_atlas_cyc -c VIC20_atlas_cyc
+
+
+
