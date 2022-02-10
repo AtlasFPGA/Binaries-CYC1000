@@ -42,7 +42,6 @@ Nota: vamos a trabajar desde el directorio /home/pi que es el que aparece por de
   ./programrbf msx_atlas.rbf 17 22 4 27
   ```
 
-  Nota: El core de MSX1 requiere soldar un reloj adicional de 50 MHz, y tener una tarjeta micro SD con [este contenido](https://mega.nz/file/20pi1aiY#FwhOZryEUyuyU1gEUCVma1ndn-2BqtvH7RUx-qwgqs0) insertada en el zócalo micro SD (10) de la placa ATLAS.
 
 #### Script para cargar un core automáticamente al arrancar la SBC
 
