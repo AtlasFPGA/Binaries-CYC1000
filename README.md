@@ -101,3 +101,43 @@ quartus_pgm --mode=jtag -o "p;gameboy_deca.sof"
 
   
 
+### Midnight Commander Launcher
+
+[GNU Midnight Commander](https://midnight-commander.org/) is a free file manager, and it started as a clone of Norton Commander.
+
+Install Midnight Commander and edit file extension scripts.  Menú command > Edit extension File.
+
+Add following extensions to the end of the mc.ext file and adapt the script to your own environtment (mine is Linux): 
+
+```sh
+### MULTICORE ###
+# sof
+regex/\.sof$
+	Open=/path/to/flashsof.sh %f
+# svf
+regex/\.svf$
+	Open=/path/to/flashcyc1000_svf_rbf_openFPGAloader.sh %f
+# rbf
+regex/\.rbf$
+	Open=/path/to/flashcyc1000_svf_rbf_openFPGAloader.sh %f
+
+```
+
+For reference this is the content of my own scripts:
+
+**flashsof.sh**
+
+```sh
+export PATH="/path/to/intelFPGA_lite/17.1/quartus/bin:$PATH"
+quartus_pgm --mode=jtag -o "p;$1"
+```
+
+**flashcyc1000_svf_rbf_openFPGAloader.sh**
+
+```sh
+#tested with .svf and .rbf
+openFPGALoader -b cyc1000 $1
+# flash SPI
+#openFPGALoader -b cyc1000 -f $1
+```
+
