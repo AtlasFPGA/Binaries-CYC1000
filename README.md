@@ -1,12 +1,35 @@
 # CYC1000 Binaries 
 
-Find the .rbf, .sof and .svf bitstream binaries under their category (arcades, computer, consoles).
+Find the .at1, .rbf, .sof and .svf bitstream binaries under their category (arcades, computer, consoles).
 
-Each binary includes in the filename the date when was made. 
+Each binary should include in the filename the date when was made. 
 
 Older versions go into old folder.
 
+**File formats**
 
+* **at1** 
+
+  * It is a rbf format renamed to at1. Has the same properties as rbf format
+  * It is the only format accepted by the STM32 multicore. 
+  * Following new Purple ATLAS board design, PS2 clk and data signals are exchanged and joystick pull-up resistors are added in Quartus. 
+  * In the future it is expected to work with newer and older ATLAS board versions, and with PS2 or USB keyboards. In the interim might only work with the newer purple board.
+
+* **rbf** 
+
+  * Before latest Purple ATLAS board edition was the standard format.  
+  * It is the preferred format to program Atlas from a Raspberry Pi with programRBF
+  * It can also be programmed with openFPGAloader from desktop PC with USB cable
+
+* **svf** 
+
+  * Can be programmed with openFPGAloader from desktop PC with USB cable
+
+* **sof** 
+
+  * sof is the standard Quartus format and is only programmable with Quartus tool usign the USB cable.
+
+  
 
 ## Flash bitstream to FGPA with STM32  (rbf & AT1)
 
@@ -107,7 +130,13 @@ quartus_pgm --mode=jtag -o "p;gameboy_deca.sof"
 
 Install Midnight Commander and edit file extension scripts.  Menú command > Edit extension File.
 
-Add following extensions to the end of the mc.ext file and adapt the script to your own environtment (mine is Linux): 
+Add following extensions to the end of the mc.ext file and adapt the script to your own environtment (mine is Linux). 
+
+After that launch mc command from the folder you have all the cores and double click on each extension to program it though USB cable connected to the CYC1000 FPGA.
+
+
+
+Content of mc.ext for Multicore extensions for ATLAS:
 
 ```sh
 ### MULTICORE ###
@@ -120,8 +149,14 @@ regex/\.svf$
 # rbf
 regex/\.rbf$
 	Open=/path/to/flashcyc1000_svf_rbf_openFPGAloader.sh %f
-
+# at1
+regex/\.at1$
+	Open=/home/jordi/bin/flashcyc1000_at1_openFPGAloader.sh %f
 ```
+
+
+
+
 
 For reference this is the content of my own scripts:
 
@@ -139,5 +174,13 @@ quartus_pgm --mode=jtag -o "p;$1"
 openFPGALoader -b cyc1000 $1
 # flash SPI
 #openFPGALoader -b cyc1000 -f $1
+```
+
+**flashcyc1000_at1_openFPGAloader.sh**
+
+```sh
+cp $1 core.rbf
+openFPGALoader -b cyc1000 core.rbf
+rm core.rbf
 ```
 
