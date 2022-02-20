@@ -163,8 +163,7 @@ For reference this is the content of my own scripts:
 **flashsof.sh**
 
 ```sh
-export PATH="/path/to/intelFPGA_lite/17.1/quartus/bin:$PATH"
-quartus_pgm --mode=jtag -o "p;$1"
+/path/to/intelFPGA_lite/17.1/quartus/bin/quartus_pgm --mode=jtag -o "p;$1"
 ```
 
 **flashcyc1000_svf_rbf_openFPGAloader.sh**
