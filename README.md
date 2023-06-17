@@ -110,7 +110,7 @@ quartus_pgm --mode=jtag -o "p;gameboy_deca.sof"
 
 * For AT1 files rename it first to rbf extension
 
-* Install [OpenFPGAloader](https://trabucayre.github.io/openFPGALoader/guide/install.html) .  For windows find binary [here](openfpgaloader.exe)
+* Install [OpenFPGAloader](https://trabucayre.github.io/openFPGALoader/guide/install.html) .  For windows find binary [here](openfpgaloader.exe) and follow [tutorial instructions](https://github.com/benitoss/openFPGALoader).
 
 * Execute
 
